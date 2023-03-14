@@ -98,6 +98,9 @@ void APortfolioDemoCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	//Fire
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APortfolioDemoCharacter::Fire);
 
+	//Slide
+	PlayerInputComponent->BindAction("Slide", IE_Pressed, this, &APortfolioDemoCharacter::Slide);
+
 }
 
 void APortfolioDemoCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
@@ -172,11 +175,37 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 			
 }
 
-void APortfolioDemoCharacter::ResetToWalk(EMovementMode Movement)
+void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
 {
 	GetCharacterMovement()->SetMovementMode(Movement);
 
 	IsClimbing = false;
+}
+
+void APortfolioDemoCharacter::ResetSlideToWalk()
+{
+
+}
+
+void APortfolioDemoCharacter::Slide()
+{
+	GetCharacterMovement()->SetMovementMode(MOVE_Flying);
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	float SlideDuration = PlayAnimMontage(SlideProtoType, 1.0f);
+
+	if (SlideDuration > 0)
+	{
+		FTimerDelegate MyDelegate;
+		FTimerHandle MyHandle;
+		//set timer		
+		MyDelegate.BindUObject(this, &APortfolioDemoCharacter::ResetToWalk, MOVE_Walking);
+		GetWorld()->GetTimerManager().SetTimer(MyHandle, MyDelegate, SlideDuration + 0.3f, false);
+	}
+	else
+	{
+		return;
+	}
 }
 
 void APortfolioDemoCharacter::DetectClimb()

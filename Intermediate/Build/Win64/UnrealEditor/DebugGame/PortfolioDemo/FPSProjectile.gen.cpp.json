@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\fpsprojectile.gen.cpp",
+        "Source": "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\fpsprojectile.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
+        "PCH": "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
         "Includes": [
-            "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\debuggame\\portfoliodemo\\definitions.portfoliodemo.h",
-            "e:\\cgspectrum\\abstraction\\portfoliodemo\\source\\portfoliodemo\\fpsprojectile.h",
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\debuggame\\portfoliodemo\\definitions.portfoliodemo.h",
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\source\\portfoliodemo\\fpsprojectile.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\spherecomponent.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
             "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\shapecomponent.generated.h",
@@ -15,7 +15,7 @@
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\movementcomponent.h",
             "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\movementcomponent.generated.h",
             "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\projectilemovementcomponent.generated.h",
-            "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\fpsprojectile.generated.h"
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\fpsprojectile.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -1,10 +1,10 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.cpp",
+        "Source": "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h",
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\public\\enginesharedpch.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\core\\public\\containers\\containersfwd.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\core\\public\\hal\\platform.h",

@@ -48,14 +48,23 @@ public:
 	float MaxClimbRange = 120.0f;
 
 	bool IsClimbing = false;
+	bool IsSlide = false;
 
 	UFUNCTION()
-	void ResetToWalk(EMovementMode Movement);
+	void ResetClimbToWalk(EMovementMode Movement);
+
+	UFUNCTION()
+	void ResetSlideToWalk();
 
 protected:
 
 	UPROPERTY(EditAnywhere)
 	UAnimMontage* ClimbMontage = nullptr;
+
+	UPROPERTY(EditAnywhere)
+	UAnimMontage* SlideProtoType = nullptr;
+
+	void Slide();
 
 	void DetectClimb();
 

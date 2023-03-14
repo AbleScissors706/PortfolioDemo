@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\cgspectrum\\abstraction\\portfoliodemo\\source\\portfoliodemo\\doorinteractioncomponent.cpp",
+        "Source": "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\source\\portfoliodemo\\doorinteractioncomponent.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
+        "PCH": "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
         "Includes": [
-            "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\debuggame\\portfoliodemo\\definitions.portfoliodemo.h",
-            "e:\\cgspectrum\\abstraction\\portfoliodemo\\source\\portfoliodemo\\doorinteractioncomponent.h",
-            "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\doorinteractioncomponent.generated.h",
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\debuggame\\portfoliodemo\\definitions.portfoliodemo.h",
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\source\\portfoliodemo\\doorinteractioncomponent.h",
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\doorinteractioncomponent.generated.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\triggerbox.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\triggerbase.h",
             "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\triggerbase.generated.h",
