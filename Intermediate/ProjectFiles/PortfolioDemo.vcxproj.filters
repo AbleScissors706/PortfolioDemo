@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\PortfolioDemo.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\PortfolioDemo.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\PortfolioDemoEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\README.md" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
+    <Filter Include="Source\PortfolioDemo">
+      <UniqueIdentifier>{3C0B95C5-D38E-3766-8584-59EDABB3192D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PortfolioDemo\DoorInteractionComponent.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\DoorInteractionComponent.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PortfolioDemo\FPSProjectile.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\FPSProjectile.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PortfolioDemo\InteractableDoor.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\InteractableDoor.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\PortfolioDemo\PortfolioDemo.Build.cs">
+      <Filter>Source\PortfolioDemo</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\PortfolioDemo\PortfolioDemo.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\PortfolioDemo.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PortfolioDemo\PortfolioDemoCharacter.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\PortfolioDemoCharacter.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PortfolioDemo\SweepTrace.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\SweepTrace.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

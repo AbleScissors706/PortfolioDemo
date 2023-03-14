@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\CGSpectrum\\Abstraction\\PortfolioDemo\\Source\\PortfolioDemo\\PortfolioDemo.Build.cs",
+		"E:\\CGSpectrum\\Abstraction\\PortfolioDemo\\Source\\PortfolioDemo.Target.cs",
+		"E:\\CGSpectrum\\Abstraction\\PortfolioDemo\\Source\\PortfolioDemoEditor.Target.cs"
+	],
+	"EngineVersion": "5.0.3"
+}

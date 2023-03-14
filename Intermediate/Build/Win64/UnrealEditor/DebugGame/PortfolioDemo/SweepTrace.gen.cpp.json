@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\sweeptrace.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
+        "Includes": [
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\debuggame\\portfoliodemo\\definitions.portfoliodemo.h",
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\source\\portfoliodemo\\sweeptrace.h",
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\sweeptrace.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
