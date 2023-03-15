@@ -188,9 +188,9 @@ void EmptyLinkFunctionForGeneratedCodePortfolioDemoCharacter() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_ClimbMontage;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_SlideProtoType_Montage_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SlideMontage_MetaData[];
 #endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_SlideProtoType_Montage;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_SlideMontage;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -282,12 +282,12 @@ void EmptyLinkFunctionForGeneratedCodePortfolioDemoCharacter() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_ClimbMontage = { "ClimbMontage", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APortfolioDemoCharacter, ClimbMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_ClimbMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_ClimbMontage_MetaData)) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideProtoType_Montage_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideMontage_MetaData[] = {
 		{ "Category", "PortfolioDemoCharacter" },
 		{ "ModuleRelativePath", "PortfolioDemoCharacter.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideProtoType_Montage = { "SlideProtoType_Montage", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APortfolioDemoCharacter, SlideProtoType_Montage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideProtoType_Montage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideProtoType_Montage_MetaData)) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideMontage = { "SlideMontage", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APortfolioDemoCharacter, SlideMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideMontage_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APortfolioDemoCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_CameraBoom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_FollowCamera,
@@ -297,7 +297,7 @@ void EmptyLinkFunctionForGeneratedCodePortfolioDemoCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_ProjectileClass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_MaxClimbRange,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_ClimbMontage,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideProtoType_Montage,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APortfolioDemoCharacter_Statics::NewProp_SlideMontage,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APortfolioDemoCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APortfolioDemoCharacter>::IsAbstract,
@@ -335,9 +335,9 @@ void EmptyLinkFunctionForGeneratedCodePortfolioDemoCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APortfolioDemoCharacter, APortfolioDemoCharacter::StaticClass, TEXT("APortfolioDemoCharacter"), &Z_Registration_Info_UClass_APortfolioDemoCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APortfolioDemoCharacter), 1804209326U) },
+		{ Z_Construct_UClass_APortfolioDemoCharacter, APortfolioDemoCharacter::StaticClass, TEXT("APortfolioDemoCharacter"), &Z_Registration_Info_UClass_APortfolioDemoCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APortfolioDemoCharacter), 1642822296U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_1570881263(TEXT("/Script/PortfolioDemo"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_658219744(TEXT("/Script/PortfolioDemo"),
 		Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

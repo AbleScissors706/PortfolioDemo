@@ -62,7 +62,7 @@ protected:
 	UAnimMontage* ClimbMontage = nullptr;
 
 	UPROPERTY(EditAnywhere)
-	UAnimMontage* SlideProtoType_Montage = nullptr;
+	UAnimMontage* SlideMontage = nullptr;
 
 	void Slide();
 

@@ -184,8 +184,8 @@ void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
 
 void APortfolioDemoCharacter::ResetSlideToWalk(ECollisionEnabled::Type CollisionEnabled)
 {
-	GetCharacterMovement()->SetMovementMode(MOVE_Walking);
-	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);	
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	GetCharacterMovement()->SetMovementMode(MOVE_Walking);	
 
 	IsSlide = false;
 }
@@ -197,15 +197,15 @@ void APortfolioDemoCharacter::Slide()
 
 	IsSlide = true;
 
-	float SlideDuration = PlayAnimMontage(SlideProtoType_Montage, 1.0f);
+	float SlideDuration = PlayAnimMontage(SlideMontage, 1.0f);
 
-	if (SlideDuration < 0)
+	if (SlideDuration <= 0)
 	{
 		FTimerDelegate MyDelegate;
 		FTimerHandle MyHandle;
 		//set timer		
 		MyDelegate.BindUObject(this, &APortfolioDemoCharacter::ResetSlideToWalk, (ECollisionEnabled::QueryAndPhysics));
-		GetWorld()->GetTimerManager().SetTimer(MyHandle, MyDelegate, SlideDuration + 0.3, false);
+		GetWorld()->GetTimerManager().SetTimer(MyHandle, MyDelegate, SlideDuration + 1, false);
 	}
 	else
 	{

@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+Content/SoulCave/Maps/LV_Soul_Cave_BuiltData.uasset
+Content/SoulCave/Maps/LV_Soul_Cave_Mobile_BuiltData.uasset
