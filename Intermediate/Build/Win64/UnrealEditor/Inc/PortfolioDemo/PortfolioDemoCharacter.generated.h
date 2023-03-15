@@ -16,13 +16,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_SPARSE_DATA
 #define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execResetToWalk); \
+	DECLARE_FUNCTION(execResetSlideToWalk); \
+	DECLARE_FUNCTION(execResetClimbToWalk); \
 	DECLARE_FUNCTION(execFire);
 
 
 #define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execResetToWalk); \
+	DECLARE_FUNCTION(execResetSlideToWalk); \
+	DECLARE_FUNCTION(execResetClimbToWalk); \
 	DECLARE_FUNCTION(execFire);
 
 

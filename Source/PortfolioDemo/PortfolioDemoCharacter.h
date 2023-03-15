@@ -54,7 +54,7 @@ public:
 	void ResetClimbToWalk(EMovementMode Movement);
 
 	UFUNCTION()
-	void ResetSlideToWalk();
+	void ResetSlideToWalk(ECollisionEnabled::Type CollisionEnabled);
 
 protected:
 
@@ -62,7 +62,7 @@ protected:
 	UAnimMontage* ClimbMontage = nullptr;
 
 	UPROPERTY(EditAnywhere)
-	UAnimMontage* SlideProtoType = nullptr;
+	UAnimMontage* SlideProtoType_Montage = nullptr;
 
 	void Slide();
 
