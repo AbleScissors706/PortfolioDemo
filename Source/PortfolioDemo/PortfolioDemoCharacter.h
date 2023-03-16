@@ -54,7 +54,7 @@ public:
 	void ResetClimbToWalk(EMovementMode Movement);
 
 	UFUNCTION()
-	void ResetSlideToWalk(ECollisionEnabled::Type CollisionEnabled);
+	void ResetSlideToWalk();
 
 protected:
 
