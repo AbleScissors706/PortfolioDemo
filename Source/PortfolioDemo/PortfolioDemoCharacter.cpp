@@ -191,13 +191,14 @@ void APortfolioDemoCharacter::ResetSlideToWalk()
 
 void APortfolioDemoCharacter::Slide()
 {
+	//crouch and we slide, trigger on startcrouch.
 	GetCharacterMovement()->Crouch(true);	
 
 	IsSlide = true;
 
 	float SlideDuration = PlayAnimMontage(SlideMontage, 1.0f);
 
-	if (SlideDuration <= 0)
+	if (SlideDuration > 0)
 	{
 		FTimerDelegate MyDelegate;
 		FTimerHandle MyHandle;
