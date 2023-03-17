@@ -177,7 +177,7 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 
 void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
 {
-	GetCharacterMovement()->SetMovementMode(Movement);
+	GetCharacterMovement()->SetMovementMode(Movement);	
 
 	IsClimbing = false;
 }
@@ -192,7 +192,8 @@ void APortfolioDemoCharacter::ResetSlideToWalk()
 void APortfolioDemoCharacter::Slide()
 {
 	//crouch and we slide, trigger on startcrouch.
-	GetCharacterMovement()->Crouch(true);	
+	GetCharacterMovement()->CanCrouchInCurrentState();
+	GetCapsuleComponent()->SetCapsuleHalfHeight(45.0f, false);
 
 	IsSlide = true;
 
