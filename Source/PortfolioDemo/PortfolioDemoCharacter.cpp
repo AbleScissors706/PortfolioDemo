@@ -184,20 +184,26 @@ void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
 
 void APortfolioDemoCharacter::ResetSlideToWalk()
 {
-	GetCharacterMovement()->UnCrouch(true);
-
+	if (GetCharacterMovement()->IsCrouching())
+	{
+		UnCrouch();
+	}
+	//GetCharacterMovement()->UnCrouch(true);
 	IsSlide = false;
 }
 
 void APortfolioDemoCharacter::Slide()
 {
 	//crouch and we slide, trigger on startcrouch.
-	GetCharacterMovement()->CanCrouchInCurrentState();
-	GetCapsuleComponent()->SetCapsuleHalfHeight(45.0f, false);
-
+	if (!GetCharacterMovement()->IsCrouching())
+	{
+		Crouch();
+	}
+	//GetCharacterMovement()->Crouch(), SetActorLocation(GetActorLocation()), GetCapsuleComponent()->SetCapsuleHalfHeight(45.0f, false);
+	
 	IsSlide = true;
 
-	float SlideDuration = PlayAnimMontage(SlideMontage, 1.0f);
+	float SlideDuration = PlayAnimMontage(SlideMontage, 0.5f);
 
 	if (SlideDuration > 0)
 	{
@@ -314,7 +320,7 @@ void APortfolioDemoCharacter::DetectClimb()
 				}
 			}
 		}
-	}	
+	}
 }
 
 void APortfolioDemoCharacter::Sprint()
@@ -332,6 +338,8 @@ void APortfolioDemoCharacter::CallCrouch()
 	if (!GetCharacterMovement()->IsCrouching())
 	{
 		Crouch();
+
+		IsClimbing = false;
 	}
 	else
 	{
