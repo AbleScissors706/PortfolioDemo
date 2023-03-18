@@ -194,6 +194,7 @@ void APortfolioDemoCharacter::ResetSlideToWalk()
 
 void APortfolioDemoCharacter::Slide()
 {
+	IsClimbing = false;
 	//crouch and we slide, trigger on startcrouch.
 	if (!GetCharacterMovement()->IsCrouching())
 	{
@@ -203,7 +204,7 @@ void APortfolioDemoCharacter::Slide()
 	
 	IsSlide = true;
 
-	float SlideDuration = PlayAnimMontage(SlideMontage, 0.5f);
+	float SlideDuration = PlayAnimMontage(SlideMontage, 0.7f);
 
 	if (SlideDuration > 0)
 	{
@@ -338,8 +339,6 @@ void APortfolioDemoCharacter::CallCrouch()
 	if (!GetCharacterMovement()->IsCrouching())
 	{
 		Crouch();
-
-		IsClimbing = false;
 	}
 	else
 	{
