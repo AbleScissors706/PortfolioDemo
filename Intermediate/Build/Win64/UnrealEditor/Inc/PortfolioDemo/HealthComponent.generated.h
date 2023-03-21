@@ -19,11 +19,15 @@ class AController;
 #define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_SPARSE_DATA
 #define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execRespawn); \
+	DECLARE_FUNCTION(execDie); \
 	DECLARE_FUNCTION(execTakeDamage);
 
 
 #define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execRespawn); \
+	DECLARE_FUNCTION(execDie); \
 	DECLARE_FUNCTION(execTakeDamage);
 
 

@@ -172,7 +172,7 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 	{
 		DetectClimb();
 	}
-			
+		
 }
 
 void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
