@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "PortfolioDemo",
-			"Path": "D:\\Abstraction\\PortfolioDemo\\Source\\PortfolioDemo.Target.cs",
+			"Path": "E:\\CGSpectrum\\Abstraction\\PortfolioDemo\\PortfolioDemo\\Source\\PortfolioDemo.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "PortfolioDemoEditor",
-			"Path": "D:\\Abstraction\\PortfolioDemo\\Source\\PortfolioDemoEditor.Target.cs",
+			"Path": "E:\\CGSpectrum\\Abstraction\\PortfolioDemo\\PortfolioDemo\\Source\\PortfolioDemoEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

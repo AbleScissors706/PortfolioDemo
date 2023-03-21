@@ -30,6 +30,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
@@ -52,6 +55,12 @@
       <Filter>Source\PortfolioDemo</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PortfolioDemo\FPSProjectile.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PortfolioDemo\HealthComponent.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\HealthComponent.h">
       <Filter>Source\PortfolioDemo</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\PortfolioDemo\InteractableDoor.cpp">

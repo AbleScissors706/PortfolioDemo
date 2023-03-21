@@ -58,10 +58,10 @@ public:
 
 protected:
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* ClimbMontage = nullptr;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* SlideMontage = nullptr;
 
 	void Slide();

@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\portfoliodemo.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
+        "Includes": [
+            "e:\\cgspectrum\\abstraction\\portfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\debuggame\\portfoliodemo\\definitions.portfoliodemo.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
