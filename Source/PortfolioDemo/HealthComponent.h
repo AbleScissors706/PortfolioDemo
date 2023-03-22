@@ -37,5 +37,5 @@ protected:
 
 	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Respawn")
 	FVector RespawnLocation;
-	
+
 };
