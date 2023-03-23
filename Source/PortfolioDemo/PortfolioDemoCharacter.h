@@ -45,7 +45,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Character Movement: Climb")
-	float MaxClimbRange = 120.0f;
+	float MaxClimbRange = 110.0f;
 
 	bool IsClimbing = false;
 	bool IsSlide = false;
