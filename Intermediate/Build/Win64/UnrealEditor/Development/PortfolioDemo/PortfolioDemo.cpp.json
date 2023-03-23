@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\abstraction\\portfoliodemo\\source\\portfoliodemo\\portfoliodemo.cpp",
+        "Source": "c:\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\portfoliodemo.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "PCH": "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
         "Includes": [
-            "d:\\abstraction\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\development\\portfoliodemo\\definitions.portfoliodemo.h",
-            "d:\\abstraction\\portfoliodemo\\source\\portfoliodemo\\portfoliodemo.h"
+            "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\development\\portfoliodemo\\definitions.portfoliodemo.h",
+            "c:\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\portfoliodemo.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
