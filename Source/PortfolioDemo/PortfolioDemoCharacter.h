@@ -56,7 +56,7 @@ public:
 	UFUNCTION()
 	void ResetSlideToWalk();
 
-protected:
+protected:	
 
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* ClimbMontage = nullptr;

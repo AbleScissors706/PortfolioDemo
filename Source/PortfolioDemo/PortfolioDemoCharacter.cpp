@@ -10,7 +10,6 @@
 #include "DrawDebugHelpers.h"
 #include <Kismet/KismetMathLibrary.h>
 
-
 //////////////////////////////////////////////////////////////////////////
 // APortfolioDemoCharacter
 

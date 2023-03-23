@@ -12,8 +12,6 @@ UHealthComponent::UHealthComponent()
 
 	DefaultHealth = 100.0f;
 	Health = DefaultHealth;
-
-	RespawnLocation = FVector(950, 850, 122);
 }
 
 
@@ -34,8 +32,7 @@ void UHealthComponent::TakeDamage(AActor* DamagedActor, float Damage, const UDam
 {
 	if (Damage <= 0)
 	{
-		Health = 0.0f;
-		Die();
+		return;
 	}
 
 	Health = FMath::Clamp(Health - Damage, 0.0f, DefaultHealth);
@@ -48,6 +45,6 @@ void UHealthComponent::Die()
 
 void UHealthComponent::Respawn()
 {
-	Health = 100.0f;
+	Health = 100.f;
 	RespawnLocation;
 }
