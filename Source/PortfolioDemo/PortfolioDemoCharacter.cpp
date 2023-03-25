@@ -353,7 +353,7 @@ void APortfolioDemoCharacter::DetectClimb()
 					FTimerHandle MyHandle;
 					//set timer		
 					MyDelegate.BindUObject(this, &APortfolioDemoCharacter::ResetClimbToWalk, MOVE_Walking);
-					GetWorld()->GetTimerManager().SetTimer(MyHandle, MyDelegate,  ClimbDuration + 0.3f, false);					
+					GetWorld()->GetTimerManager().SetTimer(MyHandle, MyDelegate,  ClimbDuration + 0.4f, false);					
 				}
 				else
 				{
