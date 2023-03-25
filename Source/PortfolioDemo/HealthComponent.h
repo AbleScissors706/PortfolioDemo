@@ -16,27 +16,15 @@ public:
 	// Sets default values for this component's properties
 	UHealthComponent();
 
+	void TakeDamage(float Damage) { CurrentHealth -= Damage; }
+	bool IsDead() { return CurrentHealth <= FLT_EPSILON; }
+
 protected:
-	// Called when the game starts
+
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Health")
-	float DefaultHealth;
+	UPROPERTY(EditAnyWhere)
+	float MaxHealth = 100.0f;
 
-	UPROPERTY(BlueprintReadOnly)
-	float Health;
-
-	UFUNCTION()
-	void TakeDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
-
-	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Respawn")
-	FVector RespawnLocation;
-
-	UFUNCTION(BlueprintCallable)
-	void Die();
-
-	UFUNCTION(BlueprintCallable)
-	void Respawn();
-
-
+	float CurrentHealth = 0.0f;
 };

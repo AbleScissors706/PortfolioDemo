@@ -8,29 +8,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
-class UDamageType;
-class AController;
 #ifdef PORTFOLIODEMO_HealthComponent_generated_h
 #error "HealthComponent.generated.h already included, missing '#pragma once' in HealthComponent.h"
 #endif
 #define PORTFOLIODEMO_HealthComponent_generated_h
 
 #define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_SPARSE_DATA
-#define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execRespawn); \
-	DECLARE_FUNCTION(execDie); \
-	DECLARE_FUNCTION(execTakeDamage);
-
-
-#define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execRespawn); \
-	DECLARE_FUNCTION(execDie); \
-	DECLARE_FUNCTION(execTakeDamage);
-
-
+#define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_RPC_WRAPPERS
+#define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS
 #define FID_PortfolioDemo_Source_PortfolioDemo_HealthComponent_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHealthComponent(); \

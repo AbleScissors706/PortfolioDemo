@@ -7,6 +7,8 @@
 #include "FPSProjectile.h"
 #include "PortfolioDemoCharacter.generated.h"
 
+class UHealthComponent;
+
 UCLASS(config=Game)
 class APortfolioDemoCharacter : public ACharacter
 {
@@ -56,7 +58,18 @@ public:
 	UFUNCTION()
 	void ResetSlideToWalk();
 
-protected:	
+	virtual void FellOutOfWorld(const class UDamageType& dmgType) override;
+
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
+
+protected:
+
+	virtual void BeginPlay() override;
+
+	void OnDeath(bool IsFellOut);
+
+	UPROPERTY(EditAnyWhere)
+	UHealthComponent* HealthComponent;
 
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	UAnimMontage* ClimbMontage = nullptr;

@@ -1,6 +1,8 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "PortfolioDemoCharacter.h"
+#include "HealthComponent.h"
+#include "GameFramework/DamageType.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -57,6 +59,8 @@ APortfolioDemoCharacter::APortfolioDemoCharacter()
 	SprintSpeedMultiplier = 2.0f;
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
+
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -189,6 +193,43 @@ void APortfolioDemoCharacter::ResetSlideToWalk()
 	}
 	//GetCharacterMovement()->UnCrouch(true);
 	IsSlide = false;
+}
+
+void APortfolioDemoCharacter::FellOutOfWorld(const UDamageType& dmgType)
+{
+	OnDeath(true);
+}
+
+float APortfolioDemoCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float Damage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+
+	UE_LOG(LogTemp, Warning, TEXT("PortfolioDemoCharacter::TakeDamage Damage %.2f"), Damage);
+
+	if (HealthComponent)
+	{
+		HealthComponent->TakeDamage(Damage);
+		if (HealthComponent->IsDead())
+		{
+			OnDeath(false);
+		}
+	}
+	return Damage;
+}
+
+void APortfolioDemoCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+void APortfolioDemoCharacter::OnDeath(bool IsFellOut)
+{
+	APlayerController* PlayerController = GetController<APlayerController>();
+
+	if (PlayerController)
+	{
+		PlayerController->RestartLevel();
+	}
 }
 
 void APortfolioDemoCharacter::Slide()

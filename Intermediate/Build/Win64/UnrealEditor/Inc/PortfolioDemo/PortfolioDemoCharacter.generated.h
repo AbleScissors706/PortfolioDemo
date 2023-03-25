@@ -13,22 +13,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PORTFOLIODEMO_PortfolioDemoCharacter_generated_h
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_SPARSE_DATA
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_RPC_WRAPPERS \
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_SPARSE_DATA
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execResetSlideToWalk); \
 	DECLARE_FUNCTION(execResetClimbToWalk); \
 	DECLARE_FUNCTION(execFire);
 
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execResetSlideToWalk); \
 	DECLARE_FUNCTION(execResetClimbToWalk); \
 	DECLARE_FUNCTION(execFire);
 
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPortfolioDemoCharacter(); \
 	friend struct Z_Construct_UClass_APortfolioDemoCharacter_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(APortfolioDemoCharacter)
 
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_INCLASS \
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesAPortfolioDemoCharacter(); \
 	friend struct Z_Construct_UClass_APortfolioDemoCharacter_Statics; \
@@ -46,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(APortfolioDemoCharacter)
 
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_STANDARD_CONSTRUCTORS \
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APortfolioDemoCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APortfolioDemoCharacter) \
@@ -59,7 +59,7 @@ private: \
 public:
 
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APortfolioDemoCharacter(APortfolioDemoCharacter&&); \
@@ -70,25 +70,25 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APortfolioDemoCharacter)
 
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_10_PROLOG
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_GENERATED_BODY_LEGACY \
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_12_PROLOG
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_SPARSE_DATA \
-	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_RPC_WRAPPERS \
-	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_INCLASS \
-	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_STANDARD_CONSTRUCTORS \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_SPARSE_DATA \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_RPC_WRAPPERS \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_INCLASS \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_GENERATED_BODY \
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_SPARSE_DATA \
-	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_INCLASS_NO_PURE_DECLS \
-	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_13_ENHANCED_CONSTRUCTORS \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_SPARSE_DATA \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_INCLASS_NO_PURE_DECLS \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
