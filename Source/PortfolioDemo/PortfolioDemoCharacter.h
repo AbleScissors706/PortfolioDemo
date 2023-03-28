@@ -68,7 +68,7 @@ protected:
 
 	void OnDeath(bool IsFellOut);
 
-	UPROPERTY(EditAnyWhere)
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Health")
 	UHealthComponent* HealthComponent;
 
 	UPROPERTY(EditAnywhere, Category = "Montages")

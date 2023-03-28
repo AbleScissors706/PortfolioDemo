@@ -23,8 +23,9 @@ protected:
 
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnyWhere)
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Health")
 	float MaxHealth = 100.0f;
 
+	UPROPERTY(BlueprintReadOnly)
 	float CurrentHealth = 0.0f;
 };
