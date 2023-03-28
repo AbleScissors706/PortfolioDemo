@@ -96,6 +96,12 @@
     <ClInclude Include="..\..\Source\PortfolioDemo\PortfolioDemoCharacter.h">
       <Filter>Source\PortfolioDemo</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\PortfolioDemo\PortFolioDemoGameModeBase.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\PortFolioDemoGameModeBase.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PortfolioDemo\PortfolioDemoPlayerController.cpp">
       <Filter>Source\PortfolioDemo</Filter>
     </ClCompile>
