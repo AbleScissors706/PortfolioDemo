@@ -45,10 +45,22 @@
     <Filter Include="Source\PortfolioDemo">
       <UniqueIdentifier>{3C0B95C5-D38E-3766-8584-59EDABB3192D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PortfolioDemo\DealDamageComponent.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\DealDamageComponent.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PortfolioDemo\DoorInteractionComponent.cpp">
       <Filter>Source\PortfolioDemo</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PortfolioDemo\DoorInteractionComponent.h">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PortfolioDemo\FireDamageActor.cpp">
+      <Filter>Source\PortfolioDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PortfolioDemo\FireDamageActor.h">
       <Filter>Source\PortfolioDemo</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\PortfolioDemo\FPSProjectile.cpp">
