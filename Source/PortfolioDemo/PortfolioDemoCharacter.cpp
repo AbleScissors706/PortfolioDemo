@@ -376,6 +376,7 @@ void APortfolioDemoCharacter::StopSprinting()
 
 void APortfolioDemoCharacter::CallCrouch()
 {
+	IsClimbing = false;
 	if (!GetCharacterMovement()->IsCrouching())
 	{
 		Crouch();
