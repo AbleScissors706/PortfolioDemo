@@ -191,7 +191,7 @@ void APortfolioDemoCharacter::ResetSlideToWalk()
 	{
 		UnCrouch();
 	}
-	//GetCharacterMovement()->UnCrouch(true);
+	//GetCharacterMovement()->GravityScale = 1;
 	IsSlide = false;
 }
 
@@ -217,9 +217,26 @@ float APortfolioDemoCharacter::TakeDamage(float DamageAmount, FDamageEvent const
 	return Damage;
 }
 
+void APortfolioDemoCharacter::HandleItemCollected()
+{
+	ItemsCollected++;
+
+	//playing effects
+	PC->PlayerCameraManager->StartCameraShake(CamShake, 1.0f);
+
+	ItemCollected();
+}
+
+//void APortfolioDemoCharacter::ItemCollected()
+//{
+//
+//}
+
 void APortfolioDemoCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	PC = GetWorld()->GetFirstPlayerController();
 }
 
 void APortfolioDemoCharacter::OnDeath(bool IsFellOut)
@@ -240,7 +257,7 @@ void APortfolioDemoCharacter::Slide()
 	{
 		Crouch();
 	}
-	//GetCharacterMovement()->Crouch(), SetActorLocation(GetActorLocation()), GetCapsuleComponent()->SetCapsuleHalfHeight(45.0f, false);
+	//GetCharacterMovement()->GravityScale = 0;
 	
 	IsSlide = true;
 

@@ -16,6 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_SPARSE_DATA
 #define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execHandleItemCollected); \
 	DECLARE_FUNCTION(execResetSlideToWalk); \
 	DECLARE_FUNCTION(execResetClimbToWalk); \
 	DECLARE_FUNCTION(execFire);
@@ -23,11 +24,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execHandleItemCollected); \
 	DECLARE_FUNCTION(execResetSlideToWalk); \
 	DECLARE_FUNCTION(execResetClimbToWalk); \
 	DECLARE_FUNCTION(execFire);
 
 
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_EVENT_PARMS
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_CALLBACK_WRAPPERS
 #define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPortfolioDemoCharacter(); \
@@ -70,12 +74,16 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APortfolioDemoCharacter)
 
 
-#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_12_PROLOG
+#define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_12_PROLOG \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_EVENT_PARMS
+
+
 #define FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_SPARSE_DATA \
 	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_RPC_WRAPPERS \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_CALLBACK_WRAPPERS \
 	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_INCLASS \
 	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_STANDARD_CONSTRUCTORS \
 public: \
@@ -87,6 +95,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_SPARSE_DATA \
 	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_CALLBACK_WRAPPERS \
 	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_INCLASS_NO_PURE_DECLS \
 	FID_PortfolioDemo_Source_PortfolioDemo_PortfolioDemoCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \

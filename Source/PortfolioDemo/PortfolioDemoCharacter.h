@@ -62,6 +62,15 @@ public:
 
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
+	UFUNCTION(BlueprintCallable)
+	void HandleItemCollected();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void ItemCollected();
+
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly)
+	int ItemsCollected = 0;
+
 protected:
 
 	virtual void BeginPlay() override;
@@ -109,6 +118,11 @@ protected:
 
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
+
+	APlayerController* PC;
+
+	UPROPERTY(EditAnyWhere, Category = "Effects")
+	TSubclassOf<UCameraShakeBase> CamShake;
 
 protected:
 	// APawn interface
