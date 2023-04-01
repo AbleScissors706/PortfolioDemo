@@ -34,7 +34,6 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\PortfolioDemoEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\DealDamageComponent.cpp.obj"
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\DoorInteractionComponent.cpp.obj"
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\FireDamageActor.cpp.obj"
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\FPSProjectile.cpp.obj"
@@ -45,6 +44,7 @@
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\PortFolioDemoGameModeBase.cpp.obj"
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\PortfolioDemoPlayerController.cpp.obj"
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\SweepTrace.cpp.obj"
+"C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\DealDamageComponent.cpp.obj"
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\DealDamageComponent.gen.cpp.obj"
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\DoorInteractionComponent.gen.cpp.obj"
 "C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\FireDamageActor.gen.cpp.obj"
