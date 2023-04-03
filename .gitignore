@@ -375,3 +375,9 @@ Saved/Config/CrashReportClient/UECC-Windows-02BCB6C34FC850CE3254DE9C604DA121/Cra
 Saved/Config/CrashReportClient/UECC-Windows-02BCB6C34FC850CE3254DE9C604DA121/CrashReportClient.ini
 *.bin
 *.bin
+*.dll
+*.exe
+*.exp
+*.lib
+*.target
+*.ucas

@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\doorinteractioncomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemo\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealgame\\development\\portfoliodemo\\definitions.portfoliodemo.h",
+            "c:\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\doorinteractioncomponent.h",
+            "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealgame\\inc\\portfoliodemo\\doorinteractioncomponent.generated.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\triggerbox.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\triggerbase.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\triggerbase.generated.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\triggerbox.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
