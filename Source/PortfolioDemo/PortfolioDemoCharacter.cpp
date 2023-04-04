@@ -251,7 +251,7 @@ void APortfolioDemoCharacter::OnDeath(bool IsFellOut)
 
 void APortfolioDemoCharacter::Slide()
 {
-	IsClimbing = false;
+	IsClimbing = true;
 	//crouch and we slide, trigger on startcrouch.
 	if (!GetCharacterMovement()->IsCrouching())
 	{
@@ -261,7 +261,7 @@ void APortfolioDemoCharacter::Slide()
 	
 	IsSlide = true;
 
-	float SlideDuration = PlayAnimMontage(SlideMontage, 0.7f);
+	float SlideDuration = PlayAnimMontage(SlideMontage, 0.6f);
 
 	if (SlideDuration > 0)
 	{
@@ -345,7 +345,7 @@ void APortfolioDemoCharacter::DetectClimb()
 			//the character gets stuck on slopes, walls or any surfaces that is not the floor
 			//step height should not be climable
 			//waist height should be ignored
-			const float MinWaist = 100.f;
+			const float MinWaist = 80.0f;
 			const float MaxWaist = 200.0f;
 			FVector DistanceZ2 = FloorHitLocation - ActorLocation;
 			if (FMath::Abs(DistanceZ2.Z) < MinWaist && FMath::Abs(DistanceZ2.Z) < MaxWaist)
@@ -393,13 +393,15 @@ void APortfolioDemoCharacter::StopSprinting()
 
 void APortfolioDemoCharacter::CallCrouch()
 {
-	IsClimbing = false;
+	
 	if (!GetCharacterMovement()->IsCrouching())
 	{
+		IsClimbing = true;
 		Crouch();
 	}
 	else
 	{
+		IsClimbing = false;
 		UnCrouch();
 	}
 }
