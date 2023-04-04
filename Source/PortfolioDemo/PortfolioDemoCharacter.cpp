@@ -187,12 +187,13 @@ void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
 
 void APortfolioDemoCharacter::ResetSlideToWalk()
 {
+	IsSlide = false;
 	if (GetCharacterMovement()->IsCrouching())
 	{
 		UnCrouch();
 	}
 	//GetCharacterMovement()->GravityScale = 1;
-	IsSlide = false;
+	
 }
 
 void APortfolioDemoCharacter::FellOutOfWorld(const UDamageType& dmgType)
@@ -251,7 +252,6 @@ void APortfolioDemoCharacter::OnDeath(bool IsFellOut)
 
 void APortfolioDemoCharacter::Slide()
 {
-	IsClimbing = true;
 	//crouch and we slide, trigger on startcrouch.
 	if (!GetCharacterMovement()->IsCrouching())
 	{
@@ -273,6 +273,7 @@ void APortfolioDemoCharacter::Slide()
 	}
 	else
 	{
+		IsClimbing = false;
 		return;
 	}
 }
@@ -392,8 +393,7 @@ void APortfolioDemoCharacter::StopSprinting()
 }
 
 void APortfolioDemoCharacter::CallCrouch()
-{
-	
+{	
 	if (!GetCharacterMovement()->IsCrouching())
 	{
 		IsClimbing = true;
