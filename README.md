@@ -9,3 +9,9 @@ For the moment I dont have a clear idea of what it will look like, but having th
 - slide
 - wall run
 
+
+In Progess
+- wall run
+- AI
+- Combat system
+- Mini boss
