@@ -5960,3 +5960,4 @@ Binaries/Win64/UnrealEditor-PortfolioDemo-Win64-DebugGame.patch_0.exe
 Binaries/Win64/UnrealEditor-PortfolioDemo-Win64-DebugGame.dll
 Binaries/Win64/PortfolioDemoEditor.target
 Binaries/Win64/PortfolioDemoEditor-Win64-DebugGame.target
+*.sln
