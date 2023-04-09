@@ -111,12 +111,12 @@ void APortfolioDemoCharacter::SetupPlayerInputComponent(class UInputComponent* P
 
 void APortfolioDemoCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
-	Jump();
+	//Jump();
 }
 
 void APortfolioDemoCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 {
-	StopJumping();
+	//StopJumping();
 }
  
 void APortfolioDemoCharacter::TurnAtRate(float Rate)
@@ -177,9 +177,8 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 	if (!IsClimbing)
 	{
 		DetectClimb();
-	}	
-
-	if (GetCharacterMovement()->IsFalling())
+	}
+	if (GetCharacterMovement()->IsFalling() && bHoldingJump)
 	{
 		FHitResult HitResultForward;
 		FHitResult HitResultLeft;
@@ -192,36 +191,28 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 		FVector End = GetActorRightVector() * PlayerToWallDistance;
 		FVector ForwardEnd = GetActorForwardVector() * PlayerToWallDistance;
 
-		if (GetWorld()->LineTraceSingleByChannel(HitResultLeft, Start, Start + -End, Channel, TraceParams))
+		if (GetWorld()->LineTraceSingleByChannel(HitResultLeft, Start, Start + (- End), Channel, TraceParams))
 		{
 			if (GetWorld()->LineTraceSingleByChannel(HitResultForward, Start, Start + ForwardEnd, Channel, TraceParams))
-			{
 				AttachToWall(LEFT, WallRunSpeed, HitResultForward);
-			}				
 			else
-			{
 				AttachToWall(LEFT, WallRunSpeed, HitResultLeft);
-			}				
 		}
 		else if (GetWorld()->LineTraceSingleByChannel(HitResulRight, Start, Start + End, Channel, TraceParams))
 		{
 			if (GetWorld()->LineTraceSingleByChannel(HitResultForward, Start, Start + ForwardEnd, Channel, TraceParams))
-			{
 				AttachToWall(RIGHT, WallRunSpeed, HitResultForward);
-			}				
 			else
-			{
 				AttachToWall(RIGHT, WallRunSpeed, HitResulRight);
-			}
 		}
 
-		DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorForwardVector() * PlayerToWallDistance),FColor(255, 0, 0),false, -1, 0,12.333);
-
-		DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorRightVector() * PlayerToWallDistance),FColor(0, 255, 0),false, -1, 0,12.333);
-
-		DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (-GetActorRightVector() * PlayerToWallDistance),FColor(0, 0, 255),	false, -1, 0, 12.333);
-			
 	}
+
+	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorForwardVector() * PlayerToWallDistance),FColor(255, 0, 0),false, -1, 0, 12.333);
+
+	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorRightVector() * PlayerToWallDistance),FColor(0, 255, 0),false, -1, 0, 12.333);
+
+	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (-GetActorRightVector() * PlayerToWallDistance),FColor(0, 0, 255),false, -1, 0, 12.333);
 }
 
 void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
@@ -295,9 +286,14 @@ void APortfolioDemoCharacter::AttachToWall(int Direction, float WallSpeed, FHitR
 	// We times it by with wallspeed, then add the actors current location.
 	FVector NewLoc = FRotationMatrix(HitResult.Normal.Rotation()).GetScaledAxis(EAxis::Y) * WallSpeed;
 	if (Direction == LEFT)
-		NewLoc = -NewLoc + GetActorLocation();
+	{
+		NewLoc = (- NewLoc) + GetActorLocation();
+	}		
 	else
-		NewLoc = NewLoc + GetActorLocation();
+	{
+		NewLoc = NewLoc + GetActorLocation();		
+	}
+
 	SetActorLocation(NewLoc);
 }
 
@@ -464,6 +460,33 @@ void APortfolioDemoCharacter::CallCrouch()
 	{
 		IsClimbing = false;
 		UnCrouch();
+	}
+}
+
+void APortfolioDemoCharacter::Jump()
+{
+	Super::Jump();
+
+	bHoldingJump = true;
+}
+
+void APortfolioDemoCharacter::StopJumping()
+{
+	//If the player is wall running when jump is released, perform a leap from the wall
+	if (bWallRunning)
+	{
+		//Get the vector from the player to the wall
+		FVector LaunchVector = WallHit.ImpactNormal;
+		LaunchVector.Normalize();
+
+		//Merge the wall's impact vector with the player's up vector to get a "Leap" from the wall
+		LaunchVector = (LaunchVector + (GetActorUpVector() * 1.0)) / 2;
+
+		//Perform the wall jump using the player's wall jump force value and the launch vector
+		LaunchCharacter(LaunchVector * WallJumpForce, false, false);
+
+		//Uncomment to see a line trace showing the wall jump direction
+		//DrawDebugLine(GetWorld(), GetActorLocation(), (GetActorLocation() + (GetActorForwardVector() * GetCapsuleComponent()->GetScaledCapsuleRadius())) + (LaunchVector * (WallJumpForce / 25)), FColor::Red, false, 3.0f, 100, 5.0f);
 	}
 }
 

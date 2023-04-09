@@ -49,8 +49,23 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Character Movement: Climb")
 	float MaxClimbRange = 110.0f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Climb")
 	bool IsClimbing = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Slide")
 	bool IsSlide = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WallRun")
+	bool bWallRunning = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = WallRun)
+	bool bHoldingJump;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WallRun)
+	float WallJumpForce;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = WallRun)
+	FHitResult WallHit;
 
 	UFUNCTION()
 	void ResetClimbToWalk(EMovementMode Movement);
@@ -102,6 +117,8 @@ protected:
 	void StopSprinting();
 
 	virtual void CallCrouch();
+	virtual void Jump();
+	virtual void StopJumping();
 
 	//Called for forwards/backward input
 	void MoveForward(float Value);
