@@ -71,9 +71,17 @@ public:
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly)
 	int ItemsCollected = 0;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WallRun)
+	float WallRunSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WallRun)
+	float PlayerToWallDistance;
+
 protected:
 
 	virtual void BeginPlay() override;
+
+	void AttachToWall(int Direction, float WallSpeed, FHitResult HitResult);
 
 	void OnDeath(bool IsFellOut);
 

@@ -12,6 +12,9 @@
 #include "DrawDebugHelpers.h"
 #include <Kismet/KismetMathLibrary.h>
 
+#define LEFT -90
+#define RIGHT 90
+
 //////////////////////////////////////////////////////////////////////////
 // APortfolioDemoCharacter
 
@@ -115,7 +118,7 @@ void APortfolioDemoCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVecto
 {
 	StopJumping();
 }
-
+ 
 void APortfolioDemoCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
@@ -174,8 +177,51 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 	if (!IsClimbing)
 	{
 		DetectClimb();
+	}	
+
+	if (GetCharacterMovement()->IsFalling())
+	{
+		FHitResult HitResultForward;
+		FHitResult HitResultLeft;
+		FHitResult HitResulRight;
+		FCollisionQueryParams TraceParams = FCollisionQueryParams(FName(TEXT("Trace")), true, this);
+
+		ECollisionChannel Channel = ECC_WorldStatic;
+
+		FVector Start = GetActorLocation();
+		FVector End = GetActorRightVector() * PlayerToWallDistance;
+		FVector ForwardEnd = GetActorForwardVector() * PlayerToWallDistance;
+
+		if (GetWorld()->LineTraceSingleByChannel(HitResultLeft, Start, Start + -End, Channel, TraceParams))
+		{
+			if (GetWorld()->LineTraceSingleByChannel(HitResultForward, Start, Start + ForwardEnd, Channel, TraceParams))
+			{
+				AttachToWall(LEFT, WallRunSpeed, HitResultForward);
+			}				
+			else
+			{
+				AttachToWall(LEFT, WallRunSpeed, HitResultLeft);
+			}				
+		}
+		else if (GetWorld()->LineTraceSingleByChannel(HitResulRight, Start, Start + End, Channel, TraceParams))
+		{
+			if (GetWorld()->LineTraceSingleByChannel(HitResultForward, Start, Start + ForwardEnd, Channel, TraceParams))
+			{
+				AttachToWall(RIGHT, WallRunSpeed, HitResultForward);
+			}				
+			else
+			{
+				AttachToWall(RIGHT, WallRunSpeed, HitResulRight);
+			}
+		}
+
+		DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorForwardVector() * PlayerToWallDistance),FColor(255, 0, 0),false, -1, 0,12.333);
+
+		DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorRightVector() * PlayerToWallDistance),FColor(0, 255, 0),false, -1, 0,12.333);
+
+		DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (-GetActorRightVector() * PlayerToWallDistance),FColor(0, 0, 255),	false, -1, 0, 12.333);
+			
 	}
-		
 }
 
 void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
@@ -228,16 +274,31 @@ void APortfolioDemoCharacter::HandleItemCollected()
 	ItemCollected();
 }
 
-//void APortfolioDemoCharacter::ItemCollected()
-//{
-//
-//}
-
 void APortfolioDemoCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
 	PC = GetWorld()->GetFirstPlayerController();
+}
+
+void APortfolioDemoCharacter::AttachToWall(int Direction, float WallSpeed, FHitResult HitResult)
+{
+	//Stop Character
+	GetCharacterMovement()->StopMovementKeepPathing();
+
+	// Set rotation of character 90 or -90 degrees of the normal rotation.
+	FRotator RotationOf90Degrees(0, Direction, 0);
+	FRotator LeftOrRightDirection = RotationOf90Degrees.RotateVector(HitResult.Normal).Rotation();
+	FRotator newRotation(0, LeftOrRightDirection.Yaw, 0);
+	SetActorRotation(newRotation, ETeleportType::TeleportPhysics);
+	// Next we are going to take the normal vector and grab its rotation and grab its right vector.
+	// We times it by with wallspeed, then add the actors current location.
+	FVector NewLoc = FRotationMatrix(HitResult.Normal.Rotation()).GetScaledAxis(EAxis::Y) * WallSpeed;
+	if (Direction == LEFT)
+		NewLoc = -NewLoc + GetActorLocation();
+	else
+		NewLoc = NewLoc + GetActorLocation();
+	SetActorLocation(NewLoc);
 }
 
 void APortfolioDemoCharacter::OnDeath(bool IsFellOut)
