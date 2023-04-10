@@ -58,15 +58,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WallRun")
 	bool bWallRunning = false;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = WallRun)
-	bool bHoldingJump;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WallRun)
-	float WallJumpForce;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = WallRun)
-	FHitResult WallHit;
-
 	UFUNCTION()
 	void ResetClimbToWalk(EMovementMode Movement);
 
@@ -117,6 +108,7 @@ protected:
 	void StopSprinting();
 
 	virtual void CallCrouch();
+
 	virtual void Jump();
 	virtual void StopJumping();
 

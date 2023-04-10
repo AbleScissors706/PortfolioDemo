@@ -73,8 +73,8 @@ void APortfolioDemoCharacter::SetupPlayerInputComponent(class UInputComponent* P
 {
 	// Set up gameplay key bindings
 	check(PlayerInputComponent);
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &APortfolioDemoCharacter::Jump);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &APortfolioDemoCharacter::StopJumping);
 
 	//PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &APortfolioDemoCharacter::InteractPressed);
 
@@ -173,12 +173,12 @@ void APortfolioDemoCharacter::Fire()
 void APortfolioDemoCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+
 	if (!IsClimbing)
 	{
 		DetectClimb();
 	}
-	if (GetCharacterMovement()->IsFalling() && bHoldingJump)
+	if (GetCharacterMovement()->IsFalling())
 	{
 		FHitResult HitResultForward;
 		FHitResult HitResultLeft;
@@ -205,7 +205,6 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 			else
 				AttachToWall(RIGHT, WallRunSpeed, HitResulRight);
 		}
-
 	}
 
 	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorForwardVector() * PlayerToWallDistance),FColor(255, 0, 0),false, -1, 0, 12.333);
@@ -466,28 +465,12 @@ void APortfolioDemoCharacter::CallCrouch()
 void APortfolioDemoCharacter::Jump()
 {
 	Super::Jump();
-
-	bHoldingJump = true;
 }
 
 void APortfolioDemoCharacter::StopJumping()
 {
-	//If the player is wall running when jump is released, perform a leap from the wall
-	if (bWallRunning)
-	{
-		//Get the vector from the player to the wall
-		FVector LaunchVector = WallHit.ImpactNormal;
-		LaunchVector.Normalize();
+	Super::StopJumping();
 
-		//Merge the wall's impact vector with the player's up vector to get a "Leap" from the wall
-		LaunchVector = (LaunchVector + (GetActorUpVector() * 1.0)) / 2;
-
-		//Perform the wall jump using the player's wall jump force value and the launch vector
-		LaunchCharacter(LaunchVector * WallJumpForce, false, false);
-
-		//Uncomment to see a line trace showing the wall jump direction
-		//DrawDebugLine(GetWorld(), GetActorLocation(), (GetActorLocation() + (GetActorForwardVector() * GetCapsuleComponent()->GetScaledCapsuleRadius())) + (LaunchVector * (WallJumpForce / 25)), FColor::Red, false, 3.0f, 100, 5.0f);
-	}
 }
 
 void APortfolioDemoCharacter::MoveForward(float Value)
