@@ -207,11 +207,11 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 		}
 	}
 
-	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorForwardVector() * PlayerToWallDistance),FColor(255, 0, 0),false, -1, 0, 12.333);
+	/*DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorForwardVector() * PlayerToWallDistance),FColor(255, 0, 0),false, -1, 0, 12.333);
 
 	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorRightVector() * PlayerToWallDistance),FColor(0, 255, 0),false, -1, 0, 12.333);
 
-	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (-GetActorRightVector() * PlayerToWallDistance),FColor(0, 0, 255),false, -1, 0, 12.333);
+	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (-GetActorRightVector() * PlayerToWallDistance),FColor(0, 0, 255),false, -1, 0, 12.333);*/
 }
 
 void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
