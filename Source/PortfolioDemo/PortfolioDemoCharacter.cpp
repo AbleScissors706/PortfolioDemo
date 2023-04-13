@@ -174,44 +174,14 @@ void APortfolioDemoCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (!IsClimbing)
+	if(!IsClimbing)
 	{
 		DetectClimb();
 	}
-	if (GetCharacterMovement()->IsFalling())
+	if(!bWallRunning)
 	{
-		FHitResult HitResultForward;
-		FHitResult HitResultLeft;
-		FHitResult HitResulRight;
-		FCollisionQueryParams TraceParams = FCollisionQueryParams(FName(TEXT("Trace")), true, this);
-
-		ECollisionChannel Channel = ECC_WorldStatic;
-
-		FVector Start = GetActorLocation();
-		FVector End = GetActorRightVector() * PlayerToWallDistance;
-		FVector ForwardEnd = GetActorForwardVector() * PlayerToWallDistance;
-
-		if (GetWorld()->LineTraceSingleByChannel(HitResultLeft, Start, Start + (- End), Channel, TraceParams))
-		{
-			if (GetWorld()->LineTraceSingleByChannel(HitResultForward, Start, Start + ForwardEnd, Channel, TraceParams))
-				AttachToWall(LEFT, WallRunSpeed, HitResultForward);
-			else
-				AttachToWall(LEFT, WallRunSpeed, HitResultLeft);
-		}
-		else if (GetWorld()->LineTraceSingleByChannel(HitResulRight, Start, Start + End, Channel, TraceParams))
-		{
-			if (GetWorld()->LineTraceSingleByChannel(HitResultForward, Start, Start + ForwardEnd, Channel, TraceParams))
-				AttachToWall(RIGHT, WallRunSpeed, HitResultForward);
-			else
-				AttachToWall(RIGHT, WallRunSpeed, HitResulRight);
-		}
+		WallRun();
 	}
-
-	/*DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorForwardVector() * PlayerToWallDistance),FColor(255, 0, 0),false, -1, 0, 12.333);
-
-	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorRightVector() * PlayerToWallDistance),FColor(0, 255, 0),false, -1, 0, 12.333);
-
-	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (-GetActorRightVector() * PlayerToWallDistance),FColor(0, 0, 255),false, -1, 0, 12.333);*/
 }
 
 void APortfolioDemoCharacter::ResetClimbToWalk(EMovementMode Movement)
@@ -436,6 +406,44 @@ void APortfolioDemoCharacter::DetectClimb()
 			}
 		}
 	}
+}
+
+void APortfolioDemoCharacter::WallRun()
+{
+	if (GetCharacterMovement()->IsFalling())
+	{
+		FHitResult HitResultForward;
+		FHitResult HitResultLeft;
+		FHitResult HitResulRight;
+		FCollisionQueryParams TraceParams = FCollisionQueryParams(FName(TEXT("Trace")), true, this);
+
+		ECollisionChannel Channel = ECC_WorldStatic;
+
+		FVector Start = GetActorLocation();
+		FVector End = GetActorRightVector() * PlayerToWallDistance;
+		FVector ForwardEnd = GetActorForwardVector() * PlayerToWallDistance;
+
+		if (GetWorld()->LineTraceSingleByChannel(HitResultLeft, Start, Start + (-End), Channel, TraceParams))
+		{
+			if (GetWorld()->LineTraceSingleByChannel(HitResultForward, Start, Start + ForwardEnd, Channel, TraceParams))
+				AttachToWall(LEFT, WallRunSpeed, HitResultForward);
+			else
+				AttachToWall(LEFT, WallRunSpeed, HitResultLeft);
+		}
+		else if (GetWorld()->LineTraceSingleByChannel(HitResulRight, Start, Start + End, Channel, TraceParams))
+		{
+			if (GetWorld()->LineTraceSingleByChannel(HitResultForward, Start, Start + ForwardEnd, Channel, TraceParams))
+				AttachToWall(RIGHT, WallRunSpeed, HitResultForward);
+			else
+				AttachToWall(RIGHT, WallRunSpeed, HitResulRight);
+		}
+	}
+
+	/*DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorForwardVector() * PlayerToWallDistance),FColor(255, 0, 0),false, -1, 0, 12.333);
+
+	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (GetActorRightVector() * PlayerToWallDistance),FColor(0, 255, 0),false, -1, 0, 12.333);
+
+	DrawDebugLine(GetWorld(),GetActorLocation(),GetActorLocation() + (-GetActorRightVector() * PlayerToWallDistance),FColor(0, 0, 255),false, -1, 0, 12.333);*/
 }
 
 void APortfolioDemoCharacter::Sprint()

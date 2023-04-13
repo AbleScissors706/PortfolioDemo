@@ -104,6 +104,8 @@ protected:
 
 	void DetectClimb();
 
+	void WallRun();
+
 	void Sprint();
 	void StopSprinting();
 
