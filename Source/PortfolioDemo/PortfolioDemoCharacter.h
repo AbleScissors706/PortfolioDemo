@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "FPSProjectile.h"
 #include "PortfolioDemoCharacter.generated.h"
 
 class UHealthComponent;
@@ -32,17 +31,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Character Movement: Walking")
 	float SprintSpeedMultiplier;
 
-	// Function that handles firing projectiles.
-	UFUNCTION()
-	void Fire();
-
 	// Gun muzzle offset from the camera location.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	FVector MuzzleOffset;
-
-	// Projectile class to spawn.
-	UPROPERTY(EditDefaultsOnly, Category = Projectile)
-	TSubclassOf<class AFPSProjectile> ProjectileClass;
 
 	virtual void Tick(float DeltaTime) override;
 

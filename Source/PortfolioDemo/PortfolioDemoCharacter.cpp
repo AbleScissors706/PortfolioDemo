@@ -101,9 +101,6 @@ void APortfolioDemoCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &APortfolioDemoCharacter::Sprint);
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &APortfolioDemoCharacter::StopSprinting);
 
-	//Fire
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APortfolioDemoCharacter::Fire);
-
 	//Slide
 	PlayerInputComponent->BindAction("Slide", IE_Pressed, this, &APortfolioDemoCharacter::Slide);
 
@@ -129,45 +126,6 @@ void APortfolioDemoCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
 	AddControllerPitchInput(Rate * TurnRateGamepad * GetWorld()->GetDeltaSeconds());
-}
-
-void APortfolioDemoCharacter::Fire()
-{
-	// Attempt to fire a projectile.
-	if (ProjectileClass)
-	{
-		// Get the camera transform.
-		FVector CameraLocation;
-		FRotator CameraRotation;
-		GetActorEyesViewPoint(CameraLocation, CameraRotation);
-
-		// Set MuzzleOffset to spawn projectiles slightly in front of the camera.
-		MuzzleOffset.Set(100.0f, 0.0f, 0.0f);
-
-		// Transform MuzzleOffset from camera space to world space.
-		FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
-
-		// Skew the aim to be slightly upwards.
-		FRotator MuzzleRotation = CameraRotation;
-		MuzzleRotation.Pitch += 5.0f;
-
-		UWorld* World = GetWorld();
-		if (World)
-		{
-			FActorSpawnParameters SpawnParams;
-			SpawnParams.Owner = this;
-			SpawnParams.Instigator = GetInstigator();
-
-			// Spawn the projectile at the muzzle.
-			AFPSProjectile* Projectile = World->SpawnActor<AFPSProjectile>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
-			if (Projectile)
-			{
-				// Set the projectile's initial trajectory.
-				FVector LaunchDirection = MuzzleRotation.Vector();
-				Projectile->FireInDirection(LaunchDirection);
-			}
-		}
-	}
 }
 
 void APortfolioDemoCharacter::Tick(float DeltaTime)
