@@ -74,6 +74,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WallRun)
 	float PlayerToWallDistance;
 
+	void CountDown();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorldTimer")
+	int Minutes = 2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorldTimer")
+	int Secounds = 0;
+
+
 protected:
 
 	virtual void BeginPlay() override;

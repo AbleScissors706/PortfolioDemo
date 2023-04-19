@@ -11,6 +11,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "DrawDebugHelpers.h"
 #include <Kismet/KismetMathLibrary.h>
+#include <Kismet/GameplayStatics.h>
 
 #define LEFT -90
 #define RIGHT 90
@@ -193,11 +194,36 @@ void APortfolioDemoCharacter::HandleItemCollected()
 	ItemCollected();
 }
 
+void APortfolioDemoCharacter::CountDown()
+{
+	if (Secounds != 0)
+	{
+		Secounds = Secounds - 1;
+	}
+	else
+	{
+		if (Minutes == 0)
+		{
+			//do event when timer has finished
+			UGameplayStatics::OpenLevel(GetWorld(), "ThirdPersonMap");
+		}
+		else
+		{
+			Minutes = Minutes - 1;
+			Secounds = 59;
+		}
+	}
+}
+
 void APortfolioDemoCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
 	PC = GetWorld()->GetFirstPlayerController();
+
+	FTimerHandle TimerHandle;
+
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &APortfolioDemoCharacter::CountDown, 1.0f, true, 0.0);
 }
 
 void APortfolioDemoCharacter::AttachToWall(int Direction, float WallSpeed, FHitResult HitResult)
