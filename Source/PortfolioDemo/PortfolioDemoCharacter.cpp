@@ -184,6 +184,26 @@ float APortfolioDemoCharacter::TakeDamage(float DamageAmount, FDamageEvent const
 	return Damage;
 }
 
+const bool APortfolioDemoCharacter::IsAlive() const
+{
+	if (HealthComponent)
+	{
+		return !HealthComponent->IsDead();
+	}
+
+	return false;
+}
+
+const float APortfolioDemoCharacter::GetCurrentHealth() const
+{
+	if (HealthComponent)
+	{
+		return !HealthComponent->GetCurrentHealth();
+	}
+
+	return 0.0f;
+}
+
 void APortfolioDemoCharacter::HandleItemCollected()
 {
 	ItemsCollected++;

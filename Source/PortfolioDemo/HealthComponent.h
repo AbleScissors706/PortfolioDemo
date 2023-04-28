@@ -18,6 +18,8 @@ public:
 
 	void TakeDamage(float Damage) { CurrentHealth -= Damage; }
 	bool IsDead() { return CurrentHealth <= FLT_EPSILON; }
+	const float GetCurrentHealth() { return CurrentHealth; }
+	void SetCurrentHealth(float health) { CurrentHealth = health; }
 
 protected:
 
@@ -28,4 +30,11 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly)
 	float CurrentHealth = 0.0f;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Stamina")
+	float MaxStamina = 100.0f;
+
+	UPROPERTY(BlueprintReadOnly)
+	float CurrentStamina = 0.0f;
+
 };
