@@ -21,6 +21,11 @@ public:
 	const float GetCurrentHealth() { return CurrentHealth; }
 	void SetCurrentHealth(float health) { CurrentHealth = health; }
 
+	void IncreaseHealth();
+
+	void DecreaseStamina();
+	bool bNoStamina = false;
+
 protected:
 
 	virtual void BeginPlay() override;
@@ -37,4 +42,9 @@ protected:
 	UPROPERTY(BlueprintReadOnly)
 	float CurrentStamina = 0.0f;
 
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Health")
+	float AddHealth = 10.0f;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Stamina")
+	float StaminaDepleted = 5.0f;
 };

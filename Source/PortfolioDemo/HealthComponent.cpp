@@ -16,6 +16,23 @@ UHealthComponent::UHealthComponent()
 
 }
 
+void UHealthComponent::IncreaseHealth()
+{
+	MaxHealth = MaxHealth + AddHealth;
+}
+
+void UHealthComponent::DecreaseStamina()
+{
+	CurrentStamina = CurrentStamina - StaminaDepleted;
+
+	if (CurrentHealth <= 0)
+	{
+		bNoStamina = true;
+	}
+
+	return;
+}
+
 void UHealthComponent::BeginPlay()
 {
 	Super::BeginPlay();
