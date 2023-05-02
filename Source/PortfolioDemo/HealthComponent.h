@@ -16,35 +16,34 @@ public:
 	// Sets default values for this component's properties
 	UHealthComponent();
 
-	void TakeDamage(float Damage) { CurrentHealth -= Damage; }
-	bool IsDead() { return CurrentHealth <= FLT_EPSILON; }
-	const float GetCurrentHealth() { return CurrentHealth; }
-	void SetCurrentHealth(float health) { CurrentHealth = health; }
+	bool IsDead() { return Health <= FLT_EPSILON; }
 
-	void IncreaseHealth();
+	//Health - healing and adding more health to character
+	//void IncreaseMaxHealth();
+	//void IncreaseHealth();
 
-	void DecreaseStamina();
-	bool bNoStamina = false;
+	////Stamina - stamina and adding more stamina to character
+	//void DecreaseStamina();
+	//bool bNoStamina = false;
+	//void IncreaseMaxStamina();
+	//void IncreaseStamina();
 
 protected:
 
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Health")
-	float MaxHealth = 100.0f;
+	float DefaultHealth;
 
 	UPROPERTY(BlueprintReadOnly)
-	float CurrentHealth = 0.0f;
+	float Health;
+
+	UFUNCTION()
+	void TakeDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
 	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Stamina")
-	float MaxStamina = 100.0f;
+	float DefaultStamina;
 
 	UPROPERTY(BlueprintReadOnly)
-	float CurrentStamina = 0.0f;
-
-	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Health")
-	float AddHealth = 10.0f;
-
-	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Stamina")
-	float StaminaDepleted = 5.0f;
+	float Stamina;
 };

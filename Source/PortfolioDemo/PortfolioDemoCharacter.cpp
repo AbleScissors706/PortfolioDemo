@@ -167,22 +167,6 @@ void APortfolioDemoCharacter::FellOutOfWorld(const UDamageType& dmgType)
 	OnDeath(true);
 }
 
-float APortfolioDemoCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
-{
-	float Damage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-
-	UE_LOG(LogTemp, Warning, TEXT("PortfolioDemoCharacter::TakeDamage Damage %.2f"), Damage);
-
-	if (HealthComponent)
-	{
-		HealthComponent->TakeDamage(Damage);
-		if (HealthComponent->IsDead())
-		{
-			OnDeath(false);
-		}
-	}
-	return Damage;
-}
 
 const bool APortfolioDemoCharacter::IsAlive() const
 {
@@ -192,16 +176,6 @@ const bool APortfolioDemoCharacter::IsAlive() const
 	}
 
 	return false;
-}
-
-const float APortfolioDemoCharacter::GetCurrentHealth() const
-{
-	if (HealthComponent)
-	{
-		return !HealthComponent->GetCurrentHealth();
-	}
-
-	return 0.0f;
 }
 
 void APortfolioDemoCharacter::HandleItemCollected()

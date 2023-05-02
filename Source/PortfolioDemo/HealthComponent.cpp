@@ -10,34 +10,34 @@ UHealthComponent::UHealthComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = false;
 
-	CurrentHealth = MaxHealth;
+	DefaultHealth = 100.0f;
+	Health = DefaultHealth;
 
-	CurrentStamina = MaxStamina;
+	DefaultStamina = 50.0f;
+	Stamina = DefaultStamina;
 
-}
-
-void UHealthComponent::IncreaseHealth()
-{
-	MaxHealth = MaxHealth + AddHealth;
-}
-
-void UHealthComponent::DecreaseStamina()
-{
-	CurrentStamina = CurrentStamina - StaminaDepleted;
-
-	if (CurrentHealth <= 0)
-	{
-		bNoStamina = true;
-	}
-
-	return;
 }
 
 void UHealthComponent::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	AActor* MyOwner = GetOwner();
+	if (MyOwner) 
+	{
+		MyOwner->OnTakeAnyDamage.AddDynamic(this, &UHealthComponent::TakeDamage);
+	}
 
+}
+
+void UHealthComponent::TakeDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
+{
+	if (Damage <= 0)
+	{
+		return;
+	}
+
+	Health = FMath::Clamp(Health - Damage, 0.0f, DefaultHealth);
 }
 
 
