@@ -1,0 +1,28 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\firedamageactor.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\development\\portfoliodemo\\definitions.portfoliodemo.h",
+            "c:\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\firedamageactor.h",
+            "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\uht\\firedamageactor.generated.h",
+            "c:\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\dealdamagecomponent.h",
+            "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\uht\\dealdamagecomponent.generated.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\particles\\particlesystemcomponent.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\particles\\particlesystem.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\particles\\particleperfstats.h",
+            "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\particlesystem.generated.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\particles\\emitter.h",
+            "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\emitter.generated.h",
+            "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\particlesystemcomponent.generated.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\components\\capsulecomponent.h",
+            "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\capsulecomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
