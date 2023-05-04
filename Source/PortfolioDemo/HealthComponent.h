@@ -16,7 +16,12 @@ public:
 	// Sets default values for this component's properties
 	UHealthComponent();
 
+	void TakeDamage(float Damage) { Health -= Damage; }
 	bool IsDead() { return Health <= FLT_EPSILON; }
+
+	UFUNCTION()
+	void TakeDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
+
 
 	//Health - healing and adding more health to character
 	//void IncreaseMaxHealth();
@@ -37,9 +42,6 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly)
 	float Health;
-
-	UFUNCTION()
-	void TakeDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
 	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "Stamina")
 	float DefaultStamina;

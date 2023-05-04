@@ -168,6 +168,21 @@ void APortfolioDemoCharacter::FellOutOfWorld(const UDamageType& dmgType)
 }
 
 
+float APortfolioDemoCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float Damage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	UE_LOG(LogTemp, Warning, TEXT("AAbstractionPlayerCharacter::TakeDamage Damage %.2f"), Damage);
+	if (HealthComponent)
+	{
+		HealthComponent->TakeDamage(Damage);
+		if (HealthComponent->IsDead())
+		{
+			OnDeath(false);
+		}
+	}
+	return Damage;
+}
+
 const bool APortfolioDemoCharacter::IsAlive() const
 {
 	if (HealthComponent)

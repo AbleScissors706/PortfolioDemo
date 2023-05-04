@@ -5963,3 +5963,5 @@ Binaries/Win64/PortfolioDemoEditor-Win64-DebugGame.target
 *.sln
 *.lc
 *.umap
+*.json
+*.ini

@@ -56,10 +56,11 @@ public:
 	void ResetSlideToWalk();
 
 	virtual void FellOutOfWorld(const class UDamageType& dmgType) override;
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
 	UFUNCTION(BlueprintCallable)
 	const bool IsAlive() const;
-
+	
 	UFUNCTION(BlueprintCallable)
 	void HandleItemCollected();
 
@@ -82,7 +83,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "WorldTimer")
 	int Secounds = 0;
-
 
 protected:
 
