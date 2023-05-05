@@ -22,7 +22,6 @@ public:
 	UFUNCTION()
 	void TakeDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
-
 	//Health - healing and adding more health to character
 	//void IncreaseMaxHealth();
 	//void IncreaseHealth();
