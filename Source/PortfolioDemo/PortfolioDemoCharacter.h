@@ -88,8 +88,6 @@ protected:
 
 	virtual void BeginPlay() override;
 
-	void AttachToWall(int Direction, float WallSpeed, FHitResult HitResult);
-
 	void OnDeath(bool IsFellOut);
 
 	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = "Health")
@@ -105,7 +103,8 @@ protected:
 
 	void DetectClimb();
 
-	void WallRun();
+	/*void AttachToWall(int Direction, float WallSpeed, FHitResult HitResult);
+	void WallRun();*/
 
 	void Sprint();
 	void StopSprinting();
