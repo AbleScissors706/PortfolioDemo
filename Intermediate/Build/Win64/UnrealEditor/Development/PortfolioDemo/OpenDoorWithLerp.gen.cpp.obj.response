@@ -1,4 +1,4 @@
-C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Inc\PortfolioDemo\UHT\OpenDoorWithLerp.gen.cpp
+"D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Inc\PortfolioDemo\UHT\OpenDoorWithLerp.gen.cpp"
 /I .
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT
 /I Runtime
@@ -269,8 +269,8 @@ C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Inc\
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
-/I C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Inc\PortfolioDemo\UHT
-/I C:\ProjectPortfolioDemo\PortfolioDemo\Source
+/I "D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Inc\PortfolioDemo\UHT"
+/I "D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Source"
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AugmentedReality\UHT
 /I Runtime\AugmentedReality\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\MRMesh\UHT
@@ -284,12 +284,12 @@ C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Inc\
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\winrt"
-/FI"C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\PortfolioDemoEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h"
-/FI"C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\Definitions.PortfolioDemo.h"
-/Yu"C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\PortfolioDemoEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h"
-/Fp"C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\PortfolioDemoEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h.pch"
-/Fo"C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\OpenDoorWithLerp.gen.cpp.obj"
-/sourceDependencies C:\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\OpenDoorWithLerp.gen.cpp.dep.json
+/FI"D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\PortfolioDemoEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h"
+/FI"D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\Definitions.PortfolioDemo.h"
+/Yu"D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\PortfolioDemoEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h"
+/Fp"D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\PortfolioDemoEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h.pch"
+/Fo"D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\OpenDoorWithLerp.gen.cpp.obj"
+/sourceDependencies "D:\CGSPECTRUM - PROGRAMMING\ProjectPortfolioDemo\PortfolioDemo\Intermediate\Build\Win64\UnrealEditor\Development\PortfolioDemo\OpenDoorWithLerp.gen.cpp.dep.json"
 /Zc:inline
 /nologo
 /Oi

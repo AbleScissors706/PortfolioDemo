@@ -91,15 +91,15 @@ void EmptyLinkFunctionForGeneratedCodeSweepTrace() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USweepTrace);
 	USweepTrace::~USweepTrace() {}
-	struct Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_Statics
+	struct Z_CompiledInDeferFile_FID_CGSPECTRUM___PROGRAMMING_ProjectPortfolioDemo_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_CGSPECTRUM___PROGRAMMING_ProjectPortfolioDemo_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_USweepTrace, USweepTrace::StaticClass, TEXT("USweepTrace"), &Z_Registration_Info_UClass_USweepTrace, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USweepTrace), 3553591363U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_542668936(TEXT("/Script/PortfolioDemo"),
-		Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_CGSPECTRUM___PROGRAMMING_ProjectPortfolioDemo_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_542668936(TEXT("/Script/PortfolioDemo"),
+		Z_CompiledInDeferFile_FID_CGSPECTRUM___PROGRAMMING_ProjectPortfolioDemo_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_CGSPECTRUM___PROGRAMMING_ProjectPortfolioDemo_PortfolioDemo_Source_PortfolioDemo_SweepTrace_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\uht\\portfoliodemogamemodebase.gen.cpp",
+        "Source": "d:\\cgspectrum - programming\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\uht\\portfoliodemogamemodebase.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
+        "PCH": "d:\\cgspectrum - programming\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\portfoliodemoeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
         "Includes": [
-            "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\development\\portfoliodemo\\definitions.portfoliodemo.h",
-            "c:\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\portfoliodemogamemodebase.h",
+            "d:\\cgspectrum - programming\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\development\\portfoliodemo\\definitions.portfoliodemo.h",
+            "d:\\cgspectrum - programming\\projectportfoliodemo\\portfoliodemo\\source\\portfoliodemo\\portfoliodemogamemodebase.h",
             "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
             "d:\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
             "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
@@ -166,7 +166,7 @@
             "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetanimationbinding.generated.h",
             "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetanimation.generated.h",
             "d:\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\userwidget.generated.h",
-            "c:\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\uht\\portfoliodemogamemodebase.generated.h"
+            "d:\\cgspectrum - programming\\projectportfoliodemo\\portfoliodemo\\intermediate\\build\\win64\\unrealeditor\\inc\\portfoliodemo\\uht\\portfoliodemogamemodebase.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
